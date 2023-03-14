@@ -18,7 +18,7 @@ The application has the following features:
 
 ## Migration
 
-[Pull Request #1](https://github.com/NordicSemiconductor/IOS-CoreBluetooth-Mock-Example/pull/1) applies all necessary changes for the app to work no a Simulator.
+[Pull Request #1](https://github.com/NordicSemiconductor/IOS-CoreBluetooth-Mock-Example/pull/1) applies all necessary changes for the app to work on a Simulator.
 
 ## License
 
