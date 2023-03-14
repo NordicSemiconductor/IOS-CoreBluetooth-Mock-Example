@@ -6,9 +6,15 @@
 //
 
 import SwiftUI
+import CoreBluetoothMock
 
 @main
 struct MockingExampleApp: App {
+    
+    init() {
+        CBMCentralManagerMock.simulateInitialState(.poweredOn)
+    }
+    
     var body: some Scene {
         WindowGroup {
             ScannerScreen()
