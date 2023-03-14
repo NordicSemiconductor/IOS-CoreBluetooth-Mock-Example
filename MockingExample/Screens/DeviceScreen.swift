@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreBluetooth
+import CoreBluetoothMock
 
 enum ConnectionState {
     case disconnected
@@ -269,3 +270,17 @@ extension Data {
     }
     
 }
+
+// As this screen requires an instance of CBPeripheral,
+// a CBMPeripheralPreview may be used.
+// Such object does not need to be obtained using scanner,
+// and handles all requests with default values.
+//
+// You may override CBMPeripheralPreview to achieve custom behavior.
+struct DeviceScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        let peripheral = ScannedPeripheral(CBMPeripheralPreview(blinky))
+        DeviceScreen(peripheral)
+    }
+}
+
