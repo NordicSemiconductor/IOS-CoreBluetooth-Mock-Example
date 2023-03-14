@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "ios-corebluetooth-mock",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/NordicSemiconductor/IOS-CoreBluetooth-Mock",
+      "state" : {
+        "revision" : "d46a187d37d515f56f9d65376ad315b9581d50f9",
+        "version" : "0.16.0"
+      }
+    }
+  ],
+  "version" : 2
+}
