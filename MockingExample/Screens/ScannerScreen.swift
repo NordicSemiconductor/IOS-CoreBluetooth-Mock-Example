@@ -116,3 +116,11 @@ extension ScannerScreen.ViewModel: CBCentralManagerDelegate {
     }
     
 }
+
+// This Preview displays advertising mock peripherals.
+// No additional configuration required.
+struct ScannerView_Previews: PreviewProvider {
+    static var previews: some View {
+        ScannerScreen()
+    }
+}
