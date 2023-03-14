@@ -13,6 +13,7 @@ struct MockingExampleApp: App {
     
     init() {
         CBMCentralManagerMock.simulateInitialState(.poweredOn)
+        CBMCentralManagerMock.simulatePeripherals([blinky])
     }
     
     var body: some Scene {
