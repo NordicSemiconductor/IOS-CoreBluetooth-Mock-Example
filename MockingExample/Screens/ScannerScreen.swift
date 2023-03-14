@@ -102,9 +102,3 @@ extension ScannerScreen.ViewModel: CBCentralManagerDelegate {
     }
     
 }
-//
-//struct ScannerView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ScannerScreen()
-//    }
-//}
