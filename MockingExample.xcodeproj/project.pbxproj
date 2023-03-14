@@ -29,6 +29,7 @@
 		F0A6C9E2299649A500FA75EB /* ForEachWithIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A6C9E1299649A500FA75EB /* ForEachWithIndex.swift */; };
 		F0A6C9E5299B95BF00FA75EB /* Data+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A6C9E4299B95BF00FA75EB /* Data+String.swift */; };
 		F0CC18AB29C0914300077C3E /* CoreBluetoothMock in Frameworks */ = {isa = PBXBuildFile; productRef = F0CC18AA29C0914300077C3E /* CoreBluetoothMock */; };
+		F0CC18AD29C092E000077C3E /* Aliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CC18AC29C092E000077C3E /* Aliases.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		F0A6C9DF299544B100FA75EB /* Attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
 		F0A6C9E1299649A500FA75EB /* ForEachWithIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEachWithIndex.swift; sourceTree = "<group>"; };
 		F0A6C9E4299B95BF00FA75EB /* Data+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+String.swift"; sourceTree = "<group>"; };
+		F0CC18AC29C092E000077C3E /* Aliases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Aliases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				F0A6C9C72992982400FA75EB /* Strings.swift */,
 				F0A6C9D329944BCF00FA75EB /* Colors.swift */,
 				F0A6C9E4299B95BF00FA75EB /* Data+String.swift */,
+				F0CC18AC29C092E000077C3E /* Aliases.swift */,
 				F0A6C9C92993015B00FA75EB /* Info.plist */,
 				F0A6C9992992752700FA75EB /* Assets.xcassets */,
 				F0A6C99B2992752700FA75EB /* MockingExample.entitlements */,
@@ -347,6 +350,7 @@
 			files = (
 				F0A6C9C42992778700FA75EB /* ScannedPeripheral.swift in Sources */,
 				F0A6C9DE2994EA4600FA75EB /* IncludedService.swift in Sources */,
+				F0CC18AD29C092E000077C3E /* Aliases.swift in Sources */,
 				F0A6C9DA2994EA3100FA75EB /* Characteristic.swift in Sources */,
 				F0A6C9DC2994EA3E00FA75EB /* Descriptor.swift in Sources */,
 				F0A6C9E0299544B100FA75EB /* Attribute.swift in Sources */,

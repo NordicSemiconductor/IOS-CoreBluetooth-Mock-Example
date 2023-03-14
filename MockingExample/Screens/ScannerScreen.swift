@@ -52,7 +52,17 @@ extension ScannerScreen {
         
         override init() {
             super.init()
-            centralManager = CBCentralManager(delegate: self, queue: .main)
+            
+            // After adding Aliases.swift, the CBCentralManager becomes an alias for
+            // CBMCentralManager (note the M in CBM...). The line below throws a compilation
+            // error, as there are now two implementations of the manager: native and mock.
+            //
+            // To fix the error, instead of creating CBCentralManager directly, use the factory.
+            //
+            // The last parameter, `forceMock`, can apply mock implementation also on
+            // physical devices.
+            centralManager = CBCentralManagerFactory.instance(delegate: self, queue: .main,
+                                                              forceMock: false)
         }
         
         func startScan() {
@@ -87,7 +97,11 @@ extension ScannerScreen.ViewModel: CBCentralManagerDelegate {
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         // Search for the device if we already have it
-        var p = self.peripherals.first { $0.peripheral == peripheral }
+        var p = self.peripherals.first {
+            // CBMPeripheral is a protocol and cannot be Equatable.
+            // Instead, compare the identifiers.
+            $0.peripheral.identifier == peripheral.identifier
+        }
         if p == nil {
             // Filter those without name, why not.
             guard let _ = advertisementData[CBAdvertisementDataLocalNameKey] else {
