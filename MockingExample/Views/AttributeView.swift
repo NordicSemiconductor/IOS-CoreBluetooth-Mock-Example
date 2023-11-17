@@ -110,7 +110,7 @@ struct AttributeView: View {
                     .offset(x: 10, y: 0)
                     .fill(Color.nordicBlue)
                     .opacity(1.0 / Double(i + 1))
-                    .frame(width: 0, height: 16)
+                    .frame(width: 0.5, height: 16)
                     .padding(.trailing)
             }
             Text(title ?? "")
