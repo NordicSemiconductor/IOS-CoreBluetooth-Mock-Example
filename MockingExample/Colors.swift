@@ -9,6 +9,4 @@ import SwiftUI
 
 extension Color {
     
-    static let nordicBlue = Color("nordicBlue")
-    
 }

@@ -41,7 +41,7 @@ extension ForEachWithIndex where ID == Data.Element.ID, Content: View, Data.Elem
     }
 }
 
-extension ForEachWithIndex: DynamicViewContent where Content: View {
+extension ForEachWithIndex: @MainActor DynamicViewContent where Content: View {
 }
 
 private struct IndexInfo<Index, Element, ID: Hashable>: Hashable {

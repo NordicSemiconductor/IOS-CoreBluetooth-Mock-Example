@@ -48,9 +48,11 @@ struct DeviceScreen: View {
         // Show "Send data" dialog.
         .alert(Strings.Dialog.title.localized, isPresented: $viewModel.showDialog) {
             TextField(Strings.Dialog.prompt.localized, text: $input)
-                .keyboardType(.asciiCapable)
                 .autocorrectionDisabled()
+#if os(iOS)
+                .keyboardType(.asciiCapable)
                 .textInputAutocapitalization(.characters)
+#endif
             Button(Strings.Dialog.cancel.localized, role: .cancel) { }
             if viewModel.properties.contains([.write, .writeWithoutResponse]) {
                 Button(Strings.Dialog.writeWithResponse.localized) {
